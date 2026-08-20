@@ -226,23 +226,37 @@
   }
 
   @media (max-width: 640px) {
+    .hero {
+      padding: 26px 20px 30px;
+    }
+    .logo-wrap {
+      width: clamp(210px, 58vw, 290px);
+      margin-bottom: 18px;
+    }
+    .hero-photos {
+      width: min(92%, 700px);
+      margin-bottom: 18px;
+    }
     .hero-photos-inner {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      height: clamp(380px, 110vw, 560px);
-      gap: 2px;
+      grid-template-columns: 1fr 1fr;
+      height: clamp(285px, 46vh, 360px);
+      gap: 8px;
     }
     .hero-photos-inner::before {
-      left: 0;
-      right: 0;
-      top: 50%;
-      bottom: auto;
-      width: auto;
-      height: 70px;
-      transform: translateY(-50%);
-      background: linear-gradient(180deg, transparent, rgba(10,10,10,0.5), transparent);
+      display: none;
+    }
+    .hero-photos-inner img {
+      object-position: center 22%;
+    }
+    .hero-photos-fade {
+      background: linear-gradient(to bottom, transparent 80%, var(--dark) 100%);
+      box-shadow: none;
+    }
+    .hero-text {
+      margin-top: 2px;
     }
     .hero-ctas {
+      margin-top: 20px;
       flex-direction: column;
       width: 100%;
       max-width: 340px;
